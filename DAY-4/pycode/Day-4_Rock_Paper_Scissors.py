@@ -31,7 +31,7 @@ scissors = '''
 ---.__(___)
 '''
 
-#Write your code below this line 👇
+# Write your code below this line 👇
 game_icons = [rock, paper, scissors]
 print("Welcome!! To Rock Paper Scissors Game...$$\n\n")
 print("Let us play the game!!..\n")
@@ -41,14 +41,13 @@ if choice >= 3 or choice < 0:
 else:
     print(game_icons[choice])
 
-    computer_choice = random.randint(0,2)
+    computer_choice = random.randint(0, 2)
     print(f"{computer_choice} is computer choice")
     print(game_icons[computer_choice])
 
-
-    if  choice == 0 and computer_choice == 2:
+    if choice == 0 and computer_choice == 2:
         print("You Won!")
-    elif choice == 1 and  computer_choice == 0:
+    elif choice == 1 and computer_choice == 0:
         print("Yow Won!!")
     elif choice == 2 and computer_choice == 1:
         print("You Won!")
@@ -58,6 +57,3 @@ else:
         print("You Loose!!!!")
     else:
         print("!!")
-
-
-

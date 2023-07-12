@@ -1,0 +1,25 @@
+While loop syntax:
+ While something_is_true:
+  code block
+
+in Hurdles challenge we used for loop.Now when we run code with while loop the code looks like this:
+
+code:
+def jump():
+    turn_left()
+    move()
+    turn_left()
+    turn_left()
+    turn_left()
+    move()
+    turn_left()
+    turn_left()
+    turn_left()
+    move()
+    turn_left()
+
+number_of_hurdles = 6
+while number_of_hurdles > 0:
+    jump()
+    number_of_hurdles -= 1
+    #print(number_of_hurdles) #for checking purpose
