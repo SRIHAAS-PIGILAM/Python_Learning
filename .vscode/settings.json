@@ -1,4 +1,11 @@
 {
   "python.analysis.typeCheckingMode": "basic",
-  "cSpell.words": ["ardvark", "euouae", "mjqqt", "Pssst", "Reeborg"]
+  "cSpell.words": [
+    "ardvark",
+    "euouae",
+    "Hermione",
+    "mjqqt",
+    "Pssst",
+    "Reeborg"
+  ]
 }
