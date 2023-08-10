@@ -37,7 +37,7 @@ def collect_bids():
             break
 
 
-# Execute the auction
+# Execute the auction:
 collect_bids()
 print(bids)
 find_highest_bidder(bids)

@@ -49,7 +49,7 @@ for x in dict:
         highest_bid = bidder_amount
         winner = x
 
-# Clearing the Screen
+# Clearing the Screen:
 os.system('cls')
 print(art.logo)
 print(f"The winner is {winner} with a bid of ${highest_bid}")
