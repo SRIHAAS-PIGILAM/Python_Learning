@@ -1,0 +1,35 @@
+Certainly! In Python, a docstring is a special kind of string that is used to document functions, modules, classes, and methods. It provides information about what the code does, how to use it, and any relevant details for developers who might read or use the code in the future.
+
+A docstring is typically enclosed in triple quotes (`'''` or `"""`) and placed at the beginning of a function, class, or module. Here's an example of a function with a docstring:
+
+```python
+def calculate_square(number):
+    """
+    This function calculates the square of a given number.
+    
+    Args:
+        number (int): The input number for which the square will be calculated.
+        
+    Returns:
+        int: The square of the input number.
+    """
+    return number ** 2
+```
+
+In the example above:
+
+- The triple-quoted string right below the function definition is the docstring.
+- It provides a brief description of what the function does.
+- The "Args" section lists the function's parameters along with their types and descriptions.
+- The "Returns" section describes what the function returns.
+
+Docstrings are not only helpful for developers who want to understand how to use a function but also for tools like Python's built-in `help()` function, IDEs, and documentation generators.
+
+To access a function's docstring, you can use the `help()` function or access the `.__doc__` attribute of the function:
+
+```python
+help(calculate_square)
+print(calculate_square.__doc__)
+```
+
+By convention, you should include docstrings in your code to make it more readable and maintainable. There are various styles and formats for docstrings, such as Google-style, NumPy-style, and reStructuredText, but the key is to provide clear and concise documentation that helps others (and your future self) understand your code.
