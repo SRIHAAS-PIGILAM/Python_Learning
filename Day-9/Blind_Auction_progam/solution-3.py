@@ -22,7 +22,7 @@ def find_highest_bidder(bidding_record):
             winner = bidder
     print(f"The winner is {winner} with a bid of ${highest_bid}")
 
-# Collect bids
+# Collect bids!!
 
 
 def collect_bids():

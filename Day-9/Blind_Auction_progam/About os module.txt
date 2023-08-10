@@ -4,7 +4,7 @@ One commonly used function from the os module is os.system(command). It allows y
 
 In the case of os.system('cls'), it is used to clear the console or terminal screen. The 'cls' command is specific to Windows systems. When this command is executed using os.system(), it clears the console screen, removing any previous output and providing a clean slate.
 
-However, it's important to note that using os.system('cls') is platform-specific and will not work on non-Windows systems. For clearing the console screen in a platform-independent way, you can consider using alternative methods, such as:
+However, it's important to note that using os.system('cls') is platform-specific and will not work on non-Windows systems. For clearing the console screen in a platform-independent way, you can consider using alternative methods, such as::
 
 Using os.system('clear'): This command works on Unix-based systems (e.g., Linux, macOS) to clear the console screen.
 Utilizing third-party libraries: There are several third-party libraries available, such as pywin32 for Windows and curses for Unix-based systems, which provide more comprehensive functionality for console manipulation, including screen clearing.

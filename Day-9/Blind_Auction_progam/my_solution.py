@@ -13,14 +13,14 @@ print("Welcome to Blind Auction program!!!")
 # ask for Name input
 Name = input("Please Tell your name: ")
 
-# Ask for Bid price
+# Ask for Bid price:
 bid_price = int(input("What's your bid: $"))
 
 # add Name and Bid into a dictionary as the key and value
 dict = {}
 dict[Name] = bid_price
 
-# Ask if there are other users who want to bid
+# Ask if there are other users who want to bid:
 any_bidders = input(
     'Are there any other bidders??? Type "yes" or "no" ').lower()
 while any_bidders == "yes":
