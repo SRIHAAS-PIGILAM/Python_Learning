@@ -1,6 +1,4 @@
-# Step-3
-
-# Step 3
+# Step-3:
 
 import random
 word_list = ["aardvark", "baboon", "camel"]
