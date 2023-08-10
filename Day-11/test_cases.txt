@@ -1,0 +1,73 @@
+
+1. **Correctness**: Manually review the code and logic to ensure it follows the rules of Blackjack and handles different scenarios correctly, such as player and dealer scores, card drawing, and winning/losing conditions.
+
+2. **Execution**: Copy the code into a Python environment such as VS Code or an online Python interpreter. Run the code and play the game yourself. Verify if the game behaves as expected and if the player's choices influence the outcomes.
+
+3. **Edge Cases**: Test the code with different scenarios, including:
+   - Getting a natural blackjack (A and a 10-valued card as the initial two cards).
+   - Having an ace in the initial hand and choosing to count it as 1 or 11.
+   - Drawing multiple cards to reach a score close to 21 and going over 21.
+   - Testing the game's responses for different winning, losing, and drawing conditions.
+   - Choosing to continue playing or quitting the game.
+
+4. **Emoji Rendering**: Make sure the emojis are displayed correctly when the corresponding conditions are met (e.g., winning, losing, drawing, etc.).
+
+5. **Error Handling**: Test for any errors or exceptions that might occur during gameplay and ensure they are handled gracefully.
+
+6. **Usability**: Evaluate the user experience by assessing if the game flow, user inputs, and messages are clear and easy to understand.
+
+7. **Performance**: While this game is relatively simple, you can test its performance by repeatedly playing and checking if there are any noticeable delays or performance issues.
+
+Remember, thoroughly testing your code across various scenarios helps ensure that it works correctly and provides a satisfying user experience.
+
+1. **Test Case: Natural Blackjack**
+   - Input: 'y'
+   - Initial Cards: [A, 10]
+   - Expected Output: "You won!!"
+   - Explanation: The player has a natural blackjack with an Ace and a 10-valued card.
+
+2. **Test Case: Player Busts**
+   - Input: 'y', 'y'
+   - Initial Cards: [9, 10]
+   - Drawn Card: 3
+   - Expected Output: "You lost"
+   - Explanation: The player's initial score is 19. Drawing a card with a value of 3 results in a score of 22, which is over 21.
+
+3. **Test Case: Choosing Ace Value**
+   - Input: 'y', 'n'
+   - Initial Cards: [A, 6]
+   - Expected Output: "Your final hand: [A, 6], final score is 17"
+   - Explanation: The player has an Ace and a 6, which can be counted as 11 or 1. Choosing to pass results in a final score of 17.
+
+4. **Test Case: Player Wins**
+   - Input: 'y', 'n'
+   - Initial Cards: [8, 10]
+   - Computer's Cards: [7, 10]
+   - Expected Output: "You win!!"
+   - Explanation: The player's score is 18, and the computer's score is 17. The player wins.
+
+5. **Test Case: Computer Wins**
+   - Input: 'y', 'n'
+   - Initial Cards: [9, 8]
+   - Computer's Cards: [A, 7]
+   - Expected Output: "You lost!!"
+   - Explanation: The player's score is 17, and the computer's score is 18 (Ace counted as 11). The computer wins.
+
+6. **Test Case: Draw**
+   - Input: 'y', 'n'
+   - Initial Cards: [7, 8]
+   - Computer's Cards: [10, 10]
+   - Expected Output: "Draw!!"
+   - Explanation: Both the player and the computer have a score of 15. It's a draw.
+
+7. **Test Case: Quitting the Game**
+   - Input: 'n'
+   - Expected Output: "Have a good day, come back later!!!"
+   - Explanation: The player chooses not to play the game and exits.
+
+8. **Test Case: Invalid Input**
+   - Input: 'x'
+   - Expected Output: (No specific output, but should handle invalid input gracefully)
+   - Explanation: The program should handle cases where the user provides unexpected input.
+
+Run these test cases by inputting the specified values and comparing the actual output with the expected output. This will help you ensure that the code functions correctly in different scenarios.

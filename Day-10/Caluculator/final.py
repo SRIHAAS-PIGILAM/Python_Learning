@@ -53,7 +53,7 @@ def calculator():
         print(f"{number1} {operation_symbols} {number2} = {answer} ")
         print("\n")
 
-        if input(f"Type 'y' to continue calculating with {answer} , type 'n' to start a new caluculation : ") == "y":
+        if input(f"Type 'y' to continue calculating with {answer} , type 'n' to start a new calculation : ") == "y":
             number1 = answer
         else:
             should_continue = False
