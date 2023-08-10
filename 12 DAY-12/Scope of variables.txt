@@ -1,0 +1,93 @@
+In Python, the scope of a variable refers to the region of the code where the variable is accessible and can be referenced. The scope determines where a variable can be used and where it cannot be accessed. Python has different types of variable scopes, including global scope, local scope, and nested scope. Here's a brief overview of each:
+
+1. Global Scope:
+Variables defined outside of any function or block are considered to have a global scope. These variables can be accessed from any part of the code, including within functions. However, if you want to modify a global variable from within a function, you need to explicitly declare it as a global variable using the `global` keyword.
+
+Example:
+```python
+global_var = 10
+
+def modify_global():
+    global global_var
+    global_var = 20
+
+modify_global()
+print(global_var)  # Output: 20
+```
+
+2. Local Scope:
+Variables defined within a function have a local scope and are only accessible within that function. They are not visible outside of the function. Each time a function is called, a new local scope is created for that function, and any variables defined within it are only available during the execution of that function.
+
+Example:
+```python
+def my_function():
+    local_var = 5
+    print(local_var)
+
+my_function()  # Output: 5
+# print(local_var)  # This will result in an error since local_var is not defined in the global scope
+```
+
+3. Nested Scope:
+Python supports nested scopes, which means that a function can be defined within another function. In this case, the inner function has access to variables in its own local scope, as well as the local scope of the outer function.
+
+Example:
+```python
+def outer_function():
+    outer_var = 10
+
+    def inner_function():
+        inner_var = 20
+        print(outer_var + inner_var)  # Both outer_var and inner_var are accessible here
+
+    inner_function()
+
+outer_function()  # Output: 30
+# print(inner_var)  # This will result in an error since inner_var is not defined in the global scope
+```
+
+It's important to understand variable scoping in Python to avoid unexpected behavior and to write clean and organized code. Always consider where a variable is defined and where it needs to be accessed to determine its appropriate scope.
+
+
+Block scope:
+No, Python does not have block scope. Unlike some programming languages like C++ or Java, where variables defined within a block (such as within an if statement or a loop) have scope limited to that block, Python follows a different scoping rule called "lexical scoping" or "function scoping."
+
+In Python, variables defined within a function have local scope, meaning they are accessible only within that function. However, variables defined within a block (such as an if statement or a loop) are still accessible outside of that block, as long as they are in the same function.
+
+Here's an example to illustrate this concept:
+
+```python
+def my_function():
+    if True:
+        block_var = 5
+    print(block_var)  # This will work even though block_var is defined within the if block
+
+my_function()  # Output: 5
+# print(block_var)  # This will result in an error since block_var is not defined in the global scope
+```
+
+In the example above, `block_var` is defined within the if block, but it is still accessible after the if block within the same function. This is because Python's scoping rules are based on function definitions rather than block structures.
+
+To summarize, Python uses function scope (lexical scoping) rather than block scope. Variables defined within a function are accessible throughout the entire function, regardless of the block structures within the function.
+
+How to Modify a Global Variable:
+
+To modify a global variable in Python, you need to use the `global` keyword within the scope of the function where you want to make changes to the global variable. This keyword indicates to Python that you intend to modify the global variable, rather than creating a new local variable with the same name. Here's how you can do it:
+
+```python
+global_variable = 10  # This is a global variable
+
+def modify_global():
+    global global_variable  # Declare that you want to modify the global variable
+    global_variable = 20    # Modify the value of the global variable inside the function
+
+print(global_variable)   # Output: 10
+modify_global()
+print(global_variable)   # Output: 20
+```
+
+In the example above, we first define a global variable named `global_variable` with a value of 10. Then, within the `modify_global` function, we declare the `global global_variable` statement to indicate that we want to modify the global variable, not create a local variable with the same name. Inside the function, we change the value of `global_variable` to 20.
+
+When we call the `modify_global` function and then print the value of `global_variable` again, we see that the global variable's value has been successfully modified.
+
+Remember that while modifying global variables can be convenient, it's generally recommended to use function parameters and return values to communicate and manipulate data between functions. Global variables can lead to unexpected behavior and make code harder to understand and maintain, especially in larger programs.
