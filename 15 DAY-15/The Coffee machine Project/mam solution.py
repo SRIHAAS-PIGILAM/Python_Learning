@@ -5,10 +5,6 @@
 # 4.Transaction successful?
 # 5.make coffee
 
-import random
-import os
-import art
-
 
 MENU = {
     "espresso": {
@@ -36,6 +32,7 @@ MENU = {
     }
 }
 
+profit = 0
 resources = {
     "water": 300,
     "milk": 200,
@@ -51,8 +48,6 @@ def is_resource_sufficient(order_ingredients):
             return False
     return True
 
-# TODO: 3.Process coins:
-
 
 def process_coins():
     """Returns the total calculated from coins inserted."""
@@ -62,8 +57,6 @@ def process_coins():
     total += int(input("how many nickles?: ")) * 0.05
     total += int(input("how many pennies?: ")) * 0.01
     return total
-
-# TODO:  4.Transaction successful
 
 
 def is_transaction_successful(money_received, drink_cost):
@@ -78,8 +71,6 @@ def is_transaction_successful(money_received, drink_cost):
         print("Sorry that's not enough money. Money refunded.")
         return False
 
-# TODO: 5.make coffee
-
 
 def make_coffee(drink_name, order_ingredients):
     """Deduct the required ingredients from the resources."""
@@ -88,20 +79,12 @@ def make_coffee(drink_name, order_ingredients):
     print(f"Here is your {drink_name} ☕️. Enjoy!")
 
 
-profit = 0
-os.system('cls')
-print(art.coffee_machine)
-print("\n")
-print(f"Welcome Sir/Madam!!!\U0001F642")
-
 is_on = True
 
 while is_on:
-    choice = input(
-        "What would you like? [espresso/latte/cappuccino]\U0001F604: ").lower()
+    choice = input("​What would you like? (espresso/latte/cappuccino): ")
     if choice == "off":
         is_on = False
-# TODO: 1.Print report of all coffee machine resources
     elif choice == "report":
         print(f"Water: {resources['water']}ml")
         print(f"Milk: {resources['milk']}ml")
